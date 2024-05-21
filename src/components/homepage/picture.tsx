@@ -1,6 +1,6 @@
-import React from 'react';
-import useSWR from 'swr';//(暂时不用swr先，后面再写api)
-import ImageWithButton from './imagewithbutton';
+import React from "react";
+
+import ImageWithButton from "./imagewithbutton";
 
 interface ImageData {
   url: string;
@@ -22,7 +22,7 @@ const Picture: React.FC<PictureProps> = ({ imageData }) => {
           alt={image.alt}
           link={image.link}
           size={200}
-          className="w-48 h-auto mr-16"
+          className="mr-16 h-auto w-48"
         />
       ))}
     </div>

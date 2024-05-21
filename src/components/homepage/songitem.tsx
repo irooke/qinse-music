@@ -1,6 +1,6 @@
 "use clent";
 import { z } from "zod";
-import Picture from '../../components/homepage/picture';
+import Picture from "../../components/homepage/picture";
 
 /*（to do 歌单信息）const secondImageData = [
     { url: "/images/song2.jpg", alt: "Song 2", link: "/songs/123126" },
@@ -9,7 +9,7 @@ import Picture from '../../components/homepage/picture';
     { url: "/images/song8.jpg", alt: "Song 8", link: "/songs/123125" }
   ];*/
 
-const Song= z.object({
+const Song = z.object({
   id: z.string(),
   user_id: z.string(),
   author: z.string(),
@@ -20,17 +20,14 @@ const Song= z.object({
 
 export type Song = z.infer<typeof Song>;
 
-interface SongItemProps{
-    data:Song;
-    onClick:(id:string)=>void
-};
- /*(todo) onClick={()=onClick(data.id)}*/
-const SongItem: React.FC<SongItemProps> = ({
-    data,
-    onClick
-    })=>{
-    return(
-        /*(todo 歌单信息)<div 
+interface SongItemProps {
+  data: Song;
+  onClick: (id: string) => void;
+}
+/*(todo) onClick={()=onClick(data.id)}*/
+const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
+  return (
+    /*(todo 歌单信息)<div 
             className="
             relative
             group
@@ -61,9 +58,7 @@ const SongItem: React.FC<SongItemProps> = ({
             <Picture imageData={secondImageData} />
             </div>
         </div>*/
-        <div></div>
-
-
-    );
-}
+    <div></div>
+  );
+};
 export default SongItem;
